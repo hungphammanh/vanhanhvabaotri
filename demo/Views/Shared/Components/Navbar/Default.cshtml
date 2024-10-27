@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<demo.Models.Category>
+
+<!-- Thanh dieu khien -->
+<nav id="navigation">
+	<!-- container -->
+	<div class="container">
+		<!-- responsive-nav -->
+		<div id="responsive-nav">
+			<!-- NAV -->
+			<ul class="main-nav nav navbar-nav">
+				<li class="active"><a href="/Home">Home</a></li>
+				<li class="active"><a href="/Products/Create">Quan ly</a></li>
+				<li><a href="/Categories">Danh Muc</a></li>
+				<li><a href="/Products">San Pham</a></li>
+
+				@foreach (var item in Model) {
+				<li><a href="#">@item.Name</a></li>
+				
+				}
+			</ul>
+			<!-- /NAV -->
+		</div>
+		<!-- /responsive-nav -->
+	</div>
+	<!-- /container -->
+</nav>
+<!-- /Thanh dieu khien -->
